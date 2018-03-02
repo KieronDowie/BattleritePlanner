@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:700');
+
+html,body
+{
+	padding:0;
+	margin:0;
+	border:0;
+	height:100%;
+	width:100%;
+	position: relative;
+	overflow:hidden;
+	background:#1d2c3f;
+}
+.background
+{
+	position: absolute;
+	left:50%;
+	top:0;
+	transform:translate(-50%,0);
+	background:url('center.png');
+	background-repeat:no-repeat;
+	border: 1.5px solid #7d8fa3;
+}
+.battlearea
+{
+	font-family: 'Lato', sans-serif;
+	position: absolute;
+	bottom:3%;	
+	border: 1.5px dashed #7d8fa3;
+	background: #1d2c3f;
+	color:#7d8fa3;
+	margin:0;
+	padding: 10px 40px;
+	font-size: 22px;
+}
+.battlebutton
+{
+	font-family: 'Lato', sans-serif;
+	position: absolute;
+	bottom:3%;	
+	border: 1.5px solid #7d8fa3;
+	background: #1d2c3f;
+	color:#7d8fa3;
+	margin:0;
+	padding: 10px 40px;
+	font-size: 22px;
+}
+.battlearea:hover
+{
+	background:#4E709B;
+	border-color:white;
+	color:white;
+	cursor:pointer;
+}
+.battlebutton:hover
+{
+	background:#458a47;
+	border-color:#458a47;
+	color:white;
+	cursor:pointer;
+}
+.battlelist
+{
+	position:absolute;
+	color:white;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.innerList
+{
+	position:relative;
+}
+.innerList .open
+{
+	display:none;
+	position:absolute;
+	left:100%;
+	bottom:0;
+	margin:0;
+	padding:0;
+	width: 300px;
+	padding: 20px 10px;
+	border: 1.5px solid #7d8fa3;
+	background: #1d2c3f;
+	text-align:center;
+	z-index:5;
+}
+.innerList .fakecounter
+{
+	width:46px;
+	height:46px;	
+	border-radius:50%;
+	z-index:2;
+	background:linear-gradient(#C5B974, #6C5333);
+	border: 1px solid #241400;
+	display:inline-block;
+	margin: 10px 10px 0px 10px;
+	margin-bottom:0;
+	cursor:pointer;
+}
+.innerList .counterinner
+{
+	padding:0;
+	margin:3px;
+	height:40px;
+	width:40px;
+	border-radius: 50%;	
+	background-size:cover;
+	z-index:3;
+}
+.innerList .show
+{
+	display:block;
+}
+.battlelist li.show
+{
+	display:block;
+}
+.battlelist li
+{
+	cursor:default;
+	display:none;
+	margin:0;
+	padding: 10px 20px;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	border: 1.5px solid #7d8fa3;
+	background: #1d2c3f;
+	color:#7d8fa3;
+}
+.battlelist .root
+{
+	display:block;
+	text-align:right;
+}
+.add
+{
+	left: 20px;	
+	bottom: 20px;
+}
+.copy
+{
+	left: 51%;
+}
+.clear
+{
+	right: 200px;
+}
+.delete
+{
+	right: 20px;
+	bottom:20px;
+	height: 20%;
+	background:none;
+}
+.delete:hover
+{
+	border-color: #7d8fa3;
+	color: #7d8fa3;
+	cursor:default;
+	background:none;
+}
+.deleteOver
+{
+	background-color:#B00E0E;
+	color:white;
+	border-color:white;
+}
+.counter
+{
+	position:absolute;
+	width:46px;
+	height:46px;	
+	border-radius:50%;
+	z-index:2;
+	background:linear-gradient(#C5B974, #6C5333);
+	border: 1px solid #241400;
+}
+.counter.ally
+{
+	background:#a5e322;
+	background:linear-gradient(#a5e322, #6A9808);
+}
+.counter.enemy
+{
+	background-color:#e63122;
+	background:linear-gradient(#e63122, #921005);
+}
+.counterinner
+{	
+	padding:0;
+	margin:3px;
+	height:40px;
+	width:40px;
+	border-radius: 50%;	
+	background-size:cover;
+	z-index:3;
+}
+.counterinner[name=alysia]
+{
+background-image:url('champions/alysia.png');
+}
+
+.counterinner[name=ashka]
+{
+background-image:url('champions/ashka.png');
+}
+
+.counterinner[name=destiny]
+{
+background-image:url('champions/destiny.png');
+}
+
+.counterinner[name=ezmo]
+{
+background-image:url('champions/ezmo.png');
+}
+
+.counterinner[name=iva]
+{
+background-image:url('champions/iva.png');
+}
+
+.counterinner[name=jade]
+{
+background-image:url('champions/jade.png');
+}
+
+.counterinner[name=jumong]
+{
+background-image:url('champions/jumong.png');
+}
+
+.counterinner[name=taya]
+{
+background-image:url('champions/taya.png');
+}
+
+.counterinner[name=varesh]
+{
+background-image:url('champions/varesh.png');
+}
+
+.counterinner[name=bakko]
+{
+background-image:url('champions/bakko.png');
+}
+
+.counterinner[name=croak]
+{
+background-image:url('champions/croak.png');
+}
+
+.counterinner[name=freya]
+{
+background-image:url('champions/freya.png');
+}
+
+.counterinner[name=raigon]
+{
+background-image:url('champions/raigon.png');
+}
+
+.counterinner[name=rook]
+{
+background-image:url('champions/rook.png');
+}
+
+.counterinner[name=ruhkaan]
+{
+background-image:url('champions/ruhkaan.png');
+}
+
+.counterinner[name=shifu]
+{
+background-image:url('champions/shifu.png');
+}
+
+.counterinner[name=thorn]
+{
+background-image:url('champions/thorn.png');
+}
+
+.counterinner[name=blossom]
+{
+background-image:url('champions/blossom.png');
+}
+
+.counterinner[name=lucie]
+{
+background-image:url('champions/lucie.png');
+}
+
+.counterinner[name=oldur]
+{
+background-image:url('champions/oldur.png');
+}
+
+.counterinner[name=pearl]
+{
+background-image:url('champions/pearl.png');
+}
+
+.counterinner[name=pestilus]
+{
+background-image:url('champions/pestilus.png');
+}
+
+.counterinner[name=poloma]
+{
+background-image:url('champions/poloma.png');
+}
+
+.counterinner[name=sirius]
+{
+background-image:url('champions/sirius.png');
+}
+
+.counterinner[name=zander]
+{
+background-image:url('champions/zander.png');
+}
+
+.counterinner[name=orb]
+{
+background-image:url('champions/orb.png');
+}
+
+.hiddentext
+{
+	display: block;
+	position:absolute;
+	left:0;
+	top:0;
+	transform:translate(-100%,-100%);
+	z-index:-1;
+}
+.tracker
+{
+	z-index:5;
+}
+.hidden
+{
+	display:none;
+}
+.addlist
+{
+	position:absolute;
+	display: block;
+	margin-top:-100%;
+	margin-left:0;
+	padding:0;
+	list-style:none;
+}
