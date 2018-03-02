@@ -24,11 +24,11 @@ $(document).ready(function(){
 	   return false;
 	});
 	$('.background').mousemove(function(e){
-		mousex = e.clientX
-		mousey = e.clientY;
+		mousex = e.clientX-$('.background').offset().left;
+		mousey = e.clientY-$('.background').offset().top;
 		//Offset to the background position
-		mousex-=$('.background').offset().top;
-		mousey-=$('.background').offset().left;
+		//mousex-=$('.background').offset().top;
+		//mousey-=$('.background').offset().left;
 	});
 	$('.clear').click(clearPlaced);	
 	$('.copy').click(function(){
