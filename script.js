@@ -26,9 +26,6 @@ $(document).ready(function(){
 	$('.background').mousemove(function(e){
 		mousex = e.clientX-$('.background').offset().left;
 		mousey = e.clientY-$('.background').offset().top;
-		//Offset to the background position
-		//mousex-=$('.background').offset().top;
-		//mousey-=$('.background').offset().left;
 	});
 	$('.clear').click(clearPlaced);	
 	$('.copy').click(function(){
@@ -62,8 +59,8 @@ $(document).ready(function(){
 	setInterval(updateTracker,10);
 	$('.background').mouseup(function(){
 		//Check if the tracker was released over the delete area
-		var x = $('.delete').offset().left;
-		var y = $('.delete').offset().top;
+		var x = $('.delete').offset().left -$('.background').offset().left;
+		var y = $('.delete').offset().top -$('.background').offset().top;
 		var right = x+$('.delete').outerWidth();
 		var bot = y+$('.delete').outerHeight();
 		if (mousex> x-$('.tracker').width()/2  && mousex < right+$('.tracker').width()/2  && mousey > y-$('.tracker').height()/2  && mousey < bot+$('.tracker').height()/2)
@@ -201,8 +198,8 @@ function updateTracker()
 		tracker.css('left',mousex-tracker.width()/2);
 		tracker.css('top',mousey-tracker.height()/2);
 		//Check if the tracker is over the delete area
-		var x = $('.delete').offset().left;
-		var y = $('.delete').offset().top;
+		var x = $('.delete').offset().left -$('.background').offset().left;
+		var y = $('.delete').offset().top -$('.background').offset().top;
 		var right = x+$('.delete').outerWidth();
 		var bot = y+$('.delete').outerHeight();
 		if (mousex> x-$('.tracker').width()/2  && mousex < right+$('.tracker').width()/2  && mousey > y-$('.tracker').height()/2  && mousey < bot+$('.tracker').height()/2)
